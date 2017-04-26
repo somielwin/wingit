@@ -1,0 +1,41 @@
+// includes all tags for paragraphs and titles such as header, p, span
+h1 { 
+	font-size: 48px;
+	font-weight: 700;
+	line-height: 50px;
+}
+h2 { 
+	font-size: 37px;
+	font-weight: 700;
+	line-height: 38px;
+}
+h3 { 
+	font-size: 25px;
+	font-weight: 700;
+}
+h4 { 
+	font-size: 20px;
+	font-weight: 700;
+}
+h5 { 
+	font-size: 0.83em;
+	font-weight: 700;
+}
+h6 { 
+	font-size: 0.67em;
+	font-weight: 700;
+}
+.par p { padding: 10px 0px; }
+.par2 p { padding: 5px 0px; }
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}

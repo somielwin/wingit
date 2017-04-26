@@ -1,0 +1,191 @@
+﻿<!doctype html>
+<html class="no-js" lang="">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Wing Money | Form</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="robots" content="noindex,nofollow" />
+
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" media="all"/> -->
+<link rel="stylesheet" href="css/style.css" media="all"/>
+
+<!--[if lt IE 9]> <script src="js/css3-mediaqueries.js"></script> <![endif]-->
+<script src="js/html5.js"></script>
+<script src="js/lib/modernizr-2.8.3.min.js"></script>
+<script src="js/pace.min.js"></script>
+</head>
+<body>
+<section id="main-container">
+
+	<section id="main-wrapper" class="form-bg">
+
+		<header>
+			<div class="logo"><a href="" alt=""><img src="images/page_template/wingit.png" alt=""></a></div>
+		</header>
+
+		<section class="main-wrapper">
+			<div class="container">
+				<div class="e-step-box">
+					<h4>Get A Wing Account Now <span>In Just 3 Easy Steps!</span></h4>
+					<ol>
+						<li>Apply using Facebook or fill up the application form &amp; upload a photo ID</li>
+						<li>Get your claiming number after completing the application form</li>
+						<li>Bring your claiming number to a Wing Agent near you</li>
+					</ol>
+				</div>
+				<div class="account-app-wrap">
+					<h2 class="sec-title text-center">Account Application</h2>
+					<form id="wing-form2" method="post" action="" enctype="multipart/form-data" novalidate>
+						
+						<div class="signup-fb">
+							<a href="#" class="waves-effect" id="useFacebook"><i class="fa fa-facebook" aria-hidden="true"></i><span>Apply Now Using Facebook</span></a>
+						</div>
+						<p class="form-text">Or fill up this form</p>
+					    <div class="loading-spinner-wrapper" id="app-loader">
+					        <span class="loading-spinner">
+					          <i class="one"></i>
+					          <i class="two"></i>
+					          <i class="three"></i>
+					        </span>
+					    </div>
+					    <div class="form-row">
+					        <div class="input-wrap">
+					            <input type="text" id="first-name" name="fname" value="" maxLength="20" required="required" onchange="this.setAttribute('value', this.value);">
+					            <label for="first-name">First Name</label>
+					            <div class="required-tooltip right">
+					                <p>This field is required <span>*</span></p>
+					            </div>
+					        </div>
+					        <div class="input-wrap">
+					            <input type="text" id="last-name" name="lname" value="" maxLength="20" required="required" onchange="this.setAttribute('value', this.value);">
+					            <label for="last-name">Last Name</label>
+					            <div class="required-tooltip right">
+					                <p>This field is required <span>*</span></p>
+					            </div>
+					        </div>
+					        <div class="input-wrap input-half">
+					            <input type="text" id="birthday" name="dob" value="" required="required" readonly>
+					            <label for="birthday" id="birthday-label">Date of Birth</label>
+					            <div class="required-tooltip left">
+					                <p>This field is required <span>*</span></p>
+					            </div>
+					        </div>
+					        <div class="input-wrap input-half gender no-error">
+					            <select class="custom-select" name="gender" id="gender">
+					                <option value="M">Male</option>
+					                <option value="F">Female</option>
+					            </select>
+					            <div class="required-tooltip right">
+					                <p>This field is required <span>*</span></p>
+					            </div>
+					        </div>
+					        <div class="clr"></div>
+					        <div class="input-wrap mobile-num">
+					            <!-- <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i>  +855 </span> -->
+					            <input type="tel" id="contact-num" name="contact_num" value=""  maxLength="10" required="required" onchange="this.setAttribute('value', this.value);">
+					            <label for="contact-num">Mobile Number</label>
+					            <div class="required-tooltip left">
+					                <p>This field is required <span>*</span></p>
+					            </div>
+					        </div>
+					        <div class="input-wrap email-wrapper">
+					            <input type="email" id="account-email" name="email" value="" required="required" onchange="this.setAttribute('value', this.value);">
+					            <label for="account-email">Email</label>
+					            <div class="required-tooltip right">
+					                <p>This field is required <span>*</span></p>
+					            </div>
+					        </div>
+					        <div class="clr"></div>
+					        <div class="input-wrap choose-currency">
+					            <label>Choose Currency:</label>
+					            <div class="custom-radio khmer">
+					                <input type="radio" id="Khmer" name="currency" value="KHR" data-value="KHR">
+					                <label for="Khmer"><span>KHR</span></label>
+					            </div>
+					            <div class="custom-radio">
+					                <input type="radio" id="usd" name="currency" checked value="USD" data-value="USD">
+					                <label for="usd"><span>USD</span></label>
+					            </div>
+					        </div>
+					        <div class="input-wrap hidden-tablet">
+					        	<label>Upload Your Photo ID</label>
+					        	<div class="photo-uploader-wrap">
+					        		<div class="table-wrap">
+					        			<div class="table-cell">
+							        		<div class="photo-uploader-btn">
+							        			<div class="btn-upload btn-docs">
+													<span><img src="images/page_template/icon-docs.png" alt=""></span>
+													<input type="file" id="imgInp" onchange="this.setAttribute('value', this.value);">
+												</div>
+							        			<span>Or</span>
+						        				<div class="btn-upload btn-take-pic">
+													<span><img src="images/page_template/icon-camera.png" alt=""></span>
+													<input type="file" id="imgInp" accept="image/*" capture="camera" onchange="this.setAttribute('value', this.value);">
+												</div>
+							        		</div>
+							        		<p>TAP HERE TO UPLOAD A PHOTO OR<br> TAKE A PHOTO USING YOUR CAMERA</p>
+							        	</div>
+						        	</div>
+					        	</div>
+					        </div>
+
+					       	<div class="input-wrap hidden-mobile">
+								<label>Upload your Photo ID</label>
+								<div class="photo-uploader-desktop">
+									<input id="file-es" name="file-es[]" type="file">
+									<p class="photo-upload-text"><a href="#">Click Here</a><label for="file-es"> to choose a file to upload <span> or just drag &amp; drop here.</span></label></p>
+								</div>
+							</div>
+					        
+					        <div class="wing-checkbox terms-condi-wrap">
+					            <input type="checkbox" id="terms-checkbox"/>
+					            <label for="terms-checkbox">I have read and accept Wing <a href="#">Terms &amp; Conditions</a></label>
+					        </div>
+					       <!--  <div class="input-wrap new-recaptcha-wrap">
+					            <div class="g-recaptcha" data-sitekey="6LdSbCUTAAAAAMlZ8GocqbqeZgtERxt1eH4yyewK" data-callback="onSuccessCaptcha"></div>
+					            <script>
+					                var onSuccessCaptcha = function(response) {
+
+					                    var errorDivs = $('.g-recaptcha-wrap');
+					                    if (errorDivs.hasClass('error')) {
+					                        $('.g-recaptcha-wrap').removeClass('error');
+					                    }
+					                }
+					            </script>
+					        </div> -->
+					        <div class="text-center">
+					            <div class="btn-wrapper">
+					                <input type="submit" class="btn btn-orange" name="" value="SUBMIT MY APPLICATION"/>
+					            </div>
+					        </div>
+					    </div>
+					</form>
+				</div>
+			</div>
+		</section>
+		
+	</section>
+</section>
+<footer>
+</footer>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery-ui.min.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/register.js"></script>
+<script src="js/fileinput.js"></script>
+<!-- <script src="js/custom.js"></script> -->
+<script type="text/javascript">
+	$('#file-es').fileinput({
+		uploadUrl: 'http://localhost/wingit', // you must set a valid URL here else you will get an error
+		allowedFileExtensions : ['jpg', 'png','gif'],
+		overwriteInitial: true,
+		showUpload: false,
+		maxFileSize: 2097152,
+		minFileCount: 1,
+		uploadAsync: false,
+    });
+</script>
+</body>
+</html>

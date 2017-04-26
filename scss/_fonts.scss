@@ -1,0 +1,58 @@
+// include all imported fonts here even google fonts
+@charset 'utf-8';
+/** font face **/
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Light-webfont.eot');
+    src: url('../fonts/Roboto-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Light-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Light-webfont.svg#roboto') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Regular-webfont.eot');
+    src: url('../fonts/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Regular-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Regular-webfont.svg#roboto') format('svg');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-Bold-webfont.eot');
+    src: url('../fonts/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Roboto-Bold-webfont.woff') format('woff'),
+         url('../fonts/Roboto-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/Roboto-Bold-webfont.svg#roboto') format('svg');
+    font-weight: 700;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-light-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/montserrat-semibold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-semibold-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+
+}
+
+/** font face **/

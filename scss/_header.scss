@@ -1,0 +1,211 @@
+// ionclude all your related style here in the header, you can leave it empty if the page has no header
+html, body { 
+	height:100%; 
+	min-height:100%;
+	font-family: $defaultFont;
+	font-weight: 300;
+	color: $defaultColor;
+	line-height: 1.4;
+}
+
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.hide { 
+	position:relative;
+}
+
+.ease,a,input[type="submit"],button { 
+
+	@include transition(all 0.5s ease);
+}
+.loader { 
+	position:relative; 
+	overflow:hidden; 
+	background:#fff url('../images/page_template/loading.gif') no-repeat center; 
+}
+
+.container {
+	max-width: 678px;
+	margin: 0 auto;
+	padding: 0px 15px;
+}
+
+#main-container { 
+	height:100%; 
+	height: auto !important; 
+	min-height:100%;
+}
+
+.main-wrapper {
+	position: relative;
+}
+
+header {
+	background: $coGreen;
+	position: relative;
+	z-index: 2;
+
+	@include breakpoint(tablet2) {
+		padding-top: 42px;
+	}
+
+	&:before {
+		content:'';
+		height: 200px;
+		background: $coGreen;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+
+		@include breakpoint(mobile) {
+			height: 140px;
+		}
+
+		@include breakpoint(phablet) {
+			height: 100px;
+		}
+
+		@include breakpoint(tablet2) {
+			height: 200px;
+		}
+	}
+}
+
+.logo {
+	position: relative;
+	width: 100%;
+    margin: -10px auto 0;
+    left: -5%;
+    padding: 10px 0 0;
+    max-width: 360px;
+
+    @include breakpoint(tablet2) {
+    	left: 0;
+    }
+
+	a {
+		display: block;
+		padding: 5px;
+		text-align: center;
+
+		img {
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin: 0 auto;
+		}
+	}
+}
+
+
+.header-hamburger {
+	position: fixed;
+	cursor: pointer;
+	z-index: 1004;
+	width: 38px;
+	height: 38px;
+	cursor: pointer;
+	padding: 0;
+	border-radius: 6px;
+	border: 1px solid #e8e8e8;
+	right: 12px;
+	top: 15px; 
+	background: $coWhite;
+	@include transition(all 0.4s cubic-bezier(0.645, 0.045, 0.355, 1));
+
+	@include breakpoint(tablet2) {
+		display: block;
+
+	}
+}
+
+.header-hamburger a {
+	width: 40px;
+	height: 40px;
+	display: block;
+	@include transform(rotate(0deg));
+	@include transition(transform 0.4s ease);
+}
+
+.header-hamburger span:first-child, .header-hamburger span:nth-child(2), .header-hamburger span:nth-child(3) {
+	content: '';
+	cursor: pointer;
+	height: 2px;
+	width: 20px;
+	background: #4d4d4d;
+	position: absolute;
+	display: block;
+	@include transition(transform 0.4s ease-in-out);
+}
+
+.header-hamburger span {
+	right: 10px;
+	top: 18px;
+
+	&:first-child {
+		@include transform(translate(0px, -7px) scale(1));
+	}
+
+	&:last-child {
+		@include transform(translate(0px, 0px) scale(1));
+	}
+
+	&:last-child {
+		@include transform(translate(0px, 7px) scale(1));
+	}
+}
+
+.header-hamburger.active {
+
+	a {
+		@include transform(rotate(90deg));
+	}
+}
+
+.table-wrap {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	display: table;
+	z-index: 2;
+
+	.table-cell {
+		display: table-cell;
+		vertical-align: middle;
+		height: 100%;
+	}
+}
+
+/*.header-hamburger.active {
+	background: transparent;
+}
+
+.header-hamburger.active span {
+  	background: transparent !important;
+}
+
+.header-hamburger.active span:before, .header-hamburger.active span:after {
+  	top: 0;
+  	background: $defaultColor;
+}*/
+
+.header-hamburger.active span:nth-child(2) {
+  	@include transform(rotate(0deg) scale(0))
+}
+
+.header-hamburger.active span:first-child {
+  	@include transform(rotate(45deg) scale(1));
+}
+
+.header-hamburger.active span:last-child {
+ 	@include transform(rotate(-45deg) scale(1));
+}
+
+
