@@ -51,6 +51,33 @@ function initCustomForm() {
     });
 }
 
+function pageInitAnim() {
+	var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+	if (/android/i.test(userAgent)) {
+        $('.hiding').removeClass('hiding').css('opacity','0');
+		$('.animated').each(function() {
+			var element = $(this);
+			TweenMax.to(element, .3, { opacity: 1, ease: Expo.easeInOut});
+		});
+	} else {
+		$('.animated').appear(function() {
+            var element = $(this);
+            var animation = element.data('animation');
+            var animationDelay = element.data('delay');
+            if(animationDelay) {
+              setTimeout(function(){
+                  element.addClass( animation + " visible" );
+                  element.removeClass('hiding');
+              }, animationDelay);
+            } else {
+              element.addClass( animation + " visible" );
+              element.removeClass('hiding');
+            }               
+        }, {accY: -90});
+	}
+}
+
 // SMOOTH SCROLL
 function smoothScroll() {
     var scrollTime = 1;
@@ -82,17 +109,7 @@ $(window).resize(function() {
 });
 
 $(document).ready(function() {
-	initCustomForm();
-	smoothScroll();
-
-	if (Modernizr.touch) {
-		$('html').addClass('bp-touch');
-	}
-
-	$('.find-out-more').click(function(e){
-		e.preventDefault();
-
-	});
+	pageInitAnim();
 });
 
 $(window).load(function() {
@@ -103,33 +120,22 @@ $(window).load(function() {
 		// totally hide the preloader especially for IE
 		setTimeout(function() {
 			$('.pace-inactive').hide();
-
-			var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-			if (/android/i.test(userAgent)) {
-		        $('.hiding').removeClass('hiding').css('opacity','0');
-				$('.animated').each(function() {
-					var element = $(this);
-					TweenMax.to(element, .3, { opacity: 1, ease: Expo.easeInOut});
-				});
-			} else {
-				$('.animated').appear(function() {
-		            var element = $(this);
-		            var animation = element.data('animation');
-		            var animationDelay = element.data('delay');
-		            if(animationDelay) {
-		              setTimeout(function(){
-		                  element.addClass( animation + " visible" );
-		                  element.removeClass('hiding');
-		              }, animationDelay);
-		            } else {
-		              element.addClass( animation + " visible" );
-		              element.removeClass('hiding');
-		            }               
-		        }, {accY: -90});
-			}
+			pageInitAnim();
+			smoothScroll();
+			initCustomForm();
 			
+
+			if (Modernizr.touch) {
+				$('html').addClass('bp-touch');
+			}
+
+			$('.find-out-more').click(function(e){
+				e.preventDefault();
+
+			});
+
 		}, 500);
+
 	});
 });
 

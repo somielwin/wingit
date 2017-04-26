@@ -600,7 +600,7 @@
 		position: relative;
 		overflow: hidden;
 		width: 100%;
-		padding-bottom: 50px;
+		padding-bottom: 80px;
 
 		@include breakpoint(tablet) {
 			padding-bottom: 80px;
@@ -634,8 +634,8 @@
 
 				a {
 					text-align: center;
-					width: 12px;
-					height: 12px;
+					width: 9px;
+					height: 9px;
 					border-radius: 50%;
 					background: $coWhite;
 					margin: 0px 3px;
@@ -646,6 +646,8 @@
 
 					@include breakpoint(iphone6) {
 						margin: 0px 5px;
+						width: 12px;
+						height: 12px;
 					}
 
 					&.flex-active {
