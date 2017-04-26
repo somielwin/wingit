@@ -78,6 +78,16 @@ function pageInitAnim() {
 	}
 }
 
+function scrollToDiv(element){
+    var offset = element.offset();
+    var offsetTop = offset.top;
+    var totalScroll = offsetTop;
+    var headerH = $('header').outerHeight(false);
+    $('body, html').animate({
+        scrollTop: totalScroll - headerH + 1 
+    }, 500);
+}
+
 // SMOOTH SCROLL
 function smoothScroll() {
     var scrollTime = 1;
@@ -133,6 +143,15 @@ $(window).load(function() {
 				e.preventDefault();
 
 			});
+
+			$('.find-out-more, .btn-knowmore').click(function(e){
+		        e.preventDefault();
+		        var __this = $(this),
+		        $targetDiv = $(__this.attr('href'));
+		        
+		        scrollToDiv($targetDiv,0);
+
+		    });
 
 		}, 500);
 

@@ -395,6 +395,8 @@
 			font-weight: 400;
 			line-height: 30px;
 			margin-bottom: 10px;
+			font-family: $defaultFont;
+			font-weight: 300;
 
 			@include breakpoint(iphone6) {
 				font-size: 30px;
@@ -446,7 +448,7 @@
 			max-width: 380px;
 			float: left;
 			width: 45%;
-			margin-top: 0;
+			margin-top: 10px;
 			margin-left: -30px;
 		}
 		
@@ -475,7 +477,7 @@
 	}
 
 	&.btn-mobile {
-		display: inline-block;
+		
 
 		@include breakpoint(tablet) {
 			display: none;
@@ -515,6 +517,9 @@
 	.text-content {
 
 		h3 {
+			font-weight: 300;
+			font-family: $defaultFont;
+
 			@include breakpoint(iphone6) {
 				font-size: 24px;
 				line-height: 32px;
@@ -525,6 +530,12 @@
 				font-size: 30px;
 				line-height: 40px;
 				margin-bottom: 18px;
+			}
+
+			@include breakpoint(tablet) {
+				font-size: 45px;
+				line-height: 55px;
+
 			}
 		}
 
@@ -765,7 +776,7 @@
 	.graphic-wrap {
 		position: absolute;
 		left: 0;
-		top: 0;
+		top: -60px;
 		z-index: 7;
 		max-width: 240px;
 
