@@ -28,6 +28,10 @@ html, body {
 	background:#fff url('../images/page_template/loading.gif') no-repeat center; 
 }
 
+a {
+	color: $coOrange;
+}
+
 .container {
 	max-width: 678px;
 	margin: 0 auto;
@@ -48,6 +52,7 @@ header {
 	background: $coGreen;
 	position: relative;
 	z-index: 2;
+	text-align: center;
 
 	@include breakpoint(tablet2) {
 		padding-top: 42px;
@@ -61,6 +66,7 @@ header {
 		top: 100%;
 		left: 0;
 		width: 100%;
+		margin-top: -1px;
 
 		@include breakpoint(mobile) {
 			height: 140px;

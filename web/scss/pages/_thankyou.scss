@@ -1,0 +1,353 @@
+.thank-bg {
+
+    .e-step-box {
+        margin-top: 0;
+
+        @include breakpoint(tablet2) {
+            margin-bottom: 30px;
+        }
+    }
+
+    .s-top {
+        color: $coWhite;
+
+        h2 {
+            font-family: $fontA;
+            font-weight: 700;
+            font-size: 26px;
+            padding-top: 30px;
+            margin-bottom: 15px;
+
+            @include breakpoint(iphone6) {
+                font-size: 30px;
+                margin-bottom: 20px;
+
+            }
+
+            @include breakpoint(tablet2) {
+                font-size: 40px;
+                margin-bottom: 30px;
+            }
+        }
+
+        h4 {
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 15px;
+
+            @include breakpoint(iphone6) {
+                margin-bottom: 20px;
+                font-size: 18px;
+            }
+
+            @include breakpoint(tablet2) {
+                margin-bottom: 20px;
+                font-size: 22px;
+            }
+        }
+    }
+
+    .e-step-box {
+        padding: 14px;
+    }
+}
+
+.claiming-box-menu {
+
+    ul {
+
+        &:after {
+            content:'';
+            display: block;
+            float: none;
+            clear: both;
+        }
+
+        li {
+            width: 50%;
+            float: left;
+            text-align: center;
+            border: 1px solid $coBorder;
+
+            &:first-child {
+                border-left: none;
+            }
+
+            &.active {
+                background: $coBlue;
+
+                a {
+                    color: $coWhite;
+                }
+            }
+
+            > a {
+                display: block;
+                text-decoration: none;
+                font-size: 12px;
+                color: $coWhite;
+                padding: 0 10px;
+                line-height: 42px;
+                color: #808285;
+                text-transform: uppercase;
+                font-weight: 700;
+
+                @include breakpoint(iphone6) {
+                    font-size: 13px;
+                }
+
+                @include breakpoint(tablet2) {
+                    font-size: 15px;
+                    line-height: 52px;
+                }
+            }
+        }
+    }
+}
+
+
+.cb-tab {
+    display: none;
+    height: 175px;
+    vertical-align: middle;
+    text-align: center;
+    position: relative;
+
+    h2 {
+        color: $coBlue;
+        text-align: center;
+        display: block;
+
+        @include breakpoint(tablet2) {
+            font-size: 48px;
+        }
+    }
+}
+
+
+.dl-img-wrap {
+    width: 100%;
+    height: 0;
+    position: absolute;
+    top: -140px;
+    left: 50%;
+    max-width: 280px;
+    height: 300px;
+    margin-left: -140px;
+
+    img {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: absolute;
+        max-width: 100%;
+        max-height: 100%;
+        display: block;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+    }
+}
+
+.other-offer {
+    padding-top: 50px;
+    position: relative;
+    z-index: 10;
+    padding-bottom: 50px;
+
+    h4 {
+        color: $coGreen;
+        text-align: center;
+        text-transform: uppercase;
+
+        @include breakpoint(tablet2) {
+            font-size: 24px;
+        }
+    }
+}
+
+.dl-app {
+    max-width: 120px;
+    margin: 25px auto 5px;
+    display: inline-block;
+
+    img {
+        max-width: 100%;
+        display: block;
+        height: auto;
+    }
+}
+
+.arrow-link {
+    font-size: 32px;
+    text-align: center;
+    -webkit-animation: animArrow 1s infinite ease;
+    -moz-animation: animArrow 1s infinite ease;
+    -ms-animation: animArrow 1s infinite ease;
+    -o-animation: animArrow 1s infinite ease;
+    animation: animArrow 1s infinite ease;
+    display: inline-block;
+}
+
+.dl-app-wrap {
+    border: 1px solid $coBorder;
+    background: $coWhite;
+    border-radius: 3px;
+    border-top: 6px solid $coGreen;
+    padding: 0px 20px 20px;
+
+}
+
+.dl-app-wrap {
+    position: relative;
+    padding-top: 200px;
+    margin-top: 150px;
+
+    .dl-opt-item {
+        position: static;
+    }
+}
+
+.latest-promo {
+
+    h2 {
+        text-align: center;
+        font-size: 28px;
+        color: $coWhite;
+        margin-top: 20px;
+        margin-bottom: 15px;
+
+    }
+}
+
+.news-item-wrap {
+
+    img {
+        width: 100%;
+        display: block;
+        height: auto;
+    }
+
+    ul {
+        @include breakpoint(phablet) {
+            text-align: center;
+            display: flex;
+        }
+
+        li {
+            @include breakpoint(phablet) {
+                display: inline-block;
+                width: 48%;
+                text-align: center;
+                vertical-align: top;
+                background: $coWhite;
+                margin: 0px 1%;
+                position: relative;
+                text-align: left;
+                overflow: hidden;
+                border-radius: 4px;
+            }
+        }
+    }
+}
+
+.dl-opt-item {
+    text-align: center;
+
+    h3 {
+        color: $coGreen;
+        padding: 0px 10px;
+        font-size: 35px;
+        font-weight: 900;
+        font-family: $fontA;
+        line-height: 42px;
+        margin-bottom: 15px;
+
+        @include breakpoint(tablet2) {
+            font-size: 40px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
+
+.news-item{ 
+    padding-bottom: 20px;
+    
+    margin-bottom: 25px;
+    position: static;
+    overflow: hidden;
+
+    h3 {
+        font-size: 20px;
+        font-weight: 700;
+
+    }
+
+    p {
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
+}
+
+.news-text {
+    padding: 10px 15px;
+
+    h3 {
+        margin-bottom: 10px;
+    }
+}
+
+.latest-promo {
+    background: $coBlue;
+    position: relative;
+    padding-bottom: 30px;
+
+    &:after {
+        content:'';
+        display: block;
+        bottom: 100%;
+        height: 400px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        background: $coBlue;
+    }
+}
+
+.ty-footer {
+    text-align: center;
+    padding-top: 20px;
+
+    @include breakpoint(tablet2) {
+        padding-top: 30px;
+    }
+
+
+    a {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+}
+
+.learn-more {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.claiming-num {
+    padding: 0px 15px;
+
+    @include breakpoint(phablet) {
+        padding: 0px 45px;
+    }
+}

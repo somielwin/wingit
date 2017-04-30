@@ -12,7 +12,22 @@ function isNumber(number) {
     return numberValid.test(number);
 }
 
+function initCustomForm() {
+    $('select.custom-select').each(function() {
+        $(this).wrap('<div class="custom-select-wrapper" />');
+        $(this).before('<div class="custom-select-display" />');
+        $(this).change(function() {
+            $(this).siblings('.custom-select-display').text( $(this).find('option:selected').text() );
+        });
+        $(this).keyup(function() {
+            $(this).siblings('.custom-select-display').text( $(this).find('option:selected').text() );
+        });
+        $(this).change();
+    });
+}
+
 $(document).ready(function() {
+	initCustomForm();
 
 	$('.photo-upload-text a').click(function(e){
 		e.preventDefault();

@@ -546,6 +546,7 @@ input::-webkit-inner-spin-button {
   }
 
   
+  
 }
 
 .photo-uploader-btn {
@@ -558,6 +559,11 @@ input::-webkit-inner-spin-button {
     display: inline-block;
     vertical-align: middle;
     border-radius: 6px;
+
+    img {
+      position: relative;
+      top: 6px;
+    }
   }
 
   span {
@@ -658,6 +664,8 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 100%;
   z-index: 2;
+  min-height: 237px;
+
 
   @include breakpoint(tablet2) {
     padding: 25px 30px;
@@ -762,6 +770,7 @@ input::-webkit-inner-spin-button {
 }
 
 .photo-uploader-desktop {
+  position: relative;
 
   .photo-upload-text {
     text-transform: uppercase;
@@ -783,6 +792,14 @@ input::-webkit-inner-spin-button {
       display: block;
 
      }
+  }
+
+  .close.fileinput-remove {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    color: #bd1919;
+    font-size: 24px;
   }
 }
 
